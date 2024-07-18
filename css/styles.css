@@ -553,7 +553,6 @@ fill: #F4F4FD;
 }
 .modal-close-btn {
   position: absolute;
-  top: 24px;
   right: 24px;
   border-radius: 50%;
 }
@@ -564,8 +563,14 @@ fill: #F4F4FD;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin-top: 48px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 24px;
   margin-bottom: 16px;
+}
+
+.modal-field {
+  margin-bottom: 20px;
 }
 
 .modal-input {
@@ -574,9 +579,9 @@ fill: #F4F4FD;
   border-radius: 4px;
   height: 40px;  
   background-color: transparent;
- padding-left: 24px;
- padding-right: 24px;
- margin-bottom: 20px;
+  padding-left: 38px;
+  padding-right: 24px;
+  
 }
 
 .modal-input::placeholder {
@@ -584,5 +589,23 @@ fill: #F4F4FD;
   font-size:12px ;
   letter-spacing: 0.04em;
   color:#8e8f99;
+}
 
+.modal-icon {
+  fill: transparent;
+  stroke:#2e2f42;
+  position: absolute;
+  left: 16px; ;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-field-wrap {
+  position: relative;
+
+}
+
+.modal-input :hover::placeholder , 
+.modal-input :focus::placeholder {
+  
 }
