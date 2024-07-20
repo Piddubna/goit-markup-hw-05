@@ -531,12 +531,15 @@ fill: #F4F4FD;
 }
 
 .footer-subscribe-box {
-  display: block;
+  
+  justify-content: right;
+  align-self: start;
   width: 453px;
   height: 80px;
 }
 
 .form-subscribe {
+ 
   width: 264px;
   height: 80px;
 }
@@ -571,19 +574,26 @@ fill: #F4F4FD;
 }
 
 .Subscribe-btn {
- display: block;
+  font: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #fff;
+  display: block;
   border-radius: 4px;
   border: 1px solid #4d5ae5;
   background-color:#4D5AE5;
-  width: 165px;
+  width: 158px;
   height: 40px;
-  padding: 8px 24px;
-  color: #fff;
-  margin: 0 auto;
+  padding-bottom: 8px; 
+  padding-left: 24px;
 }
 
 .plain {
   fill:#fff;
+  margin-left: 16px;
+  padding-top: 8px;
 }
 
 .backdrop {
@@ -684,6 +694,11 @@ fill: #F4F4FD;
   font-size:12px;
   letter-spacing: 0.04em;
   color:#8e8f99;
+  
+}
+.modal-input:hover,
+.modal-input:focus {
+  border: 1px solid #4d5ae5;
 }
 
 .modal-field-wrap {
@@ -726,8 +741,6 @@ fill: #F4F4FD;
 .textarea:focus {
   border: 1px solid #4d5ae5;
   }
-
-  
 
   .checkbox-input {
 
