@@ -439,16 +439,13 @@ color: #404BBF;
 }
 
 .footer {
-  background: #2e2f42;
-  
+  background: #2e2f42; 
 }
 
 .footer-container {
   padding: 100px 0;
-  display: flex; 
-  justify-content: space-between;
-  
-  
+  display: flex;
+  align-items: baseline;
 }
 
 .footer-logo-text {
@@ -457,32 +454,35 @@ color: #404BBF;
 }
 
 .footer-logo {
-    display: inline-block;
-    margin-bottom: 16px;
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color:#4d5ae5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color:#4d5ae5;
 }
 
 .logo-whith {
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: #f4f4fd;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #f4f4fd;
 }
 
 .footer-text {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    max-width: 264px;
-    color: #F4F4FD;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  max-width: 264px;
+  color: #F4F4FD;
 }
-
 
 .footer-list-title {
   display: inline-block;
@@ -505,6 +505,7 @@ color: #404BBF;
 
 .footer-icon-list {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -536,13 +537,16 @@ color: #404BBF;
 fill: #F4F4FD;
 }
 
-.footer-subscribe-box {
-  width: 453px;
+.footer-subscribe-wrap {
+  margin-left: auto;
   height: 80px;
 }
 
 .subscribe-tytle {
-  display: block;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  display: flex;
   font: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -553,90 +557,107 @@ fill: #F4F4FD;
 }
 
 .form-subscribe {
-  display: flex;
+  display:flex;
+  justify-content: right;
+  align-items: center;
+  gap: 24px;
 }
 
 .subscribe-input {
+  width: 264px;
+  height: 40px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding-top: 8px;
+  padding-top: 8px;
+  padding-left: 16px;
   border: 1px solid #fff;
   border-radius: 4px;
-  background-color: #2E2F42;
+  background-color: transparent;
   color: #fff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-input::placeholder {
-  font: 400;
-  font-size: 12px; 
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
   letter-spacing: 0.04em;
+  color: #ffffff;
+  width: 36px;
+  height: 24px;
   padding-top: 8px;
   padding-top: 8px;
-  padding-left: 16px;
-  width: 264px;
-  height: 40px;
-  color: #fff;
 }
 
 .Subscribe-btn {
+  font-family: "Roboto", sans-serif;
   font: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: left;
-  color: #fff;
-  display: block;
+  display: flex;
+  justify-content: center;
   border-radius: 4px;
   border: 1px solid #4d5ae5;
   background-color:#4D5AE5;
   width: 158px;
   height: 40px;
+  padding-top: 8px;
   padding-bottom: 8px; 
   padding-left: 24px;
 }
 
 .plain {
   fill:#fff;
-  margin-left: 16px;
-  padding-top: 8px;
 }
 
-.backdrop {
+.subscribe-input:hover::placeholder,
+.subscribe-input:focus::placeholder {
+  color:#31d0aa;
+}
+
+.subscribe-input:hover ,
+.subscribe-input:focus {
+  border-color: #31d0aa;
+}
+
+.modal-overlay {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
+  z-index: 999;
   background-color: rgba(46, 47, 66, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  /*opacity: 0;
+  opacity: 0;
   visibility: hidden;
-  pointer-events: none;*/
+  pointer-events: none;
 }
 
-.backdrop .is-open {
+.modal {
+  max-width: 408px;
+  max-height: 80%;
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto; 
 }
 
-.backdrop:not(.is-open) .modal {
+/* .modal-overlay:not(.is-open).modal { 
   transform: translate(-50%,-50%) scale(1.5);
- }
-
-.modal {
-  position: absolute;
-  width: 408px;
-  min-height: 584px;
-  border-radius: 4px;
-  padding: 24px;
-  background: #fcfcfc; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #fcfcfc;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+}*/
 
 .modal-close-btn {
   position: absolute;
