@@ -320,7 +320,7 @@
       </div> 
       </section>
 </main>
- <footer class="footer">
+  <footer class="footer">
        <div class="footer-container container"> 
             <div class="footer-logo-text" >
             <a class="footer-logo" href="./index.html">Web<span   class="logo-whith">Studio</span>
@@ -356,10 +356,10 @@
               </ul> 
             </div> 
         
-         <div class="footer-subscribe-wrap">
-          <p  class="subscribe-tytle">Subscribe</p>  
-            <form class="form-subscribe">
-                  <label class="form-label">
+           <div class="footer-subscribe-wrap">
+               <p  class="subscribe-tytle">Subscribe</p>  
+                <form class="form-subscribe">
+                    <label class="form-label">
                     <input  
                     class="subscribe-input" 
                     type="email" 
@@ -367,18 +367,19 @@
                     placeholder="E-mail">
                     </label>
                     <button 
-                    class="subscribe-btn" 
-                    type="submit">Subscribe
+                        class="subscribe-btn" 
+                        type="submit">Subscribe
                         <svg class="plain"
                           width="24" 
                           height="24">
-                        <use href="./images/icons.svg#icon-plaine"></use>
+                        <use href="./images/icons.svg#icon-plaine">
+                        </use>
                         </svg>
                     </button> 
                 </form>
             </div>
- </footer>
-    <div class="modal-overlay">
+  </footer>
+    <div class="modal-overlay is-open">
       <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg class="modal-close-icon" width="8" height="8"><use href="./images/icons.svg#icon-close"></use>
@@ -387,13 +388,16 @@
         <p class="modal-tytle">Leave your contacts and we will call you back</p>
         <form>
           <div class="modal-field">
-             <label  class="form-label" for="user-name">Name</label>
+              <label 
+              class="form-label"
+              for="user-name">Name
+              </label>
             <div class="modal-field-wrap">
           <input 
           class="modal-input" 
           type="text"  
           name="user-name"
-           placeholder="" 
+          placeholder="" 
           required 
           id="user-name"/>
           <svg class="modal-icon" width="18" height="24">
@@ -402,7 +406,10 @@
           </div> 
           </div>
           <div class="modal-field">
-          <label class="form-label" for="Phone">Phone</label>
+          <label 
+          class="form-label"
+          for="Phone">Phone
+          </label>
           <div class="modal-field-wrap">
           <input  
           class="modal-input"
@@ -416,36 +423,45 @@
           </div>
           </div>
           <div class="modal-field">
-            <label  class="form-label" for="Email">Email</label>
+            <label 
+              class="form-label" 
+              for="Email">Email
+              </label>
             <div class="modal-field-wrap">
           <input 
-          class="modal-input"
-           type="email"
+            class="modal-input"
+            type="email"
             name="user-email" 
             placeholder=""
-          required  id="Email"/>
-          <svg class="modal-icon" width="16" height="16">
+            required  id="Email"/>
+          <svg class="modal-icon" width="18" height="24">
             <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
           </svg>
           </div>
           </div>
           <div class="modal-field-wrap">
-            <label class="form-label" for="Comment">Comment</label>
-              <textarea class="textarea" name="Comment" id="Comment">
+            <label 
+            class="form-label" 
+            for="user-comment">Comment
+            </label>
+              <textarea class="textarea" 
+              name="user-comment" 
+              id="user-comment">
     Text input
               </textarea>
             </div>
             <div class="modal-field">
               <input 
               type="checkbox"
-              name="policy"
-              id="policy"
-              value="true"
+              name="user-privacy"
+              id="user-privacy"
               class="modal-check visually-hidden"
               value="true"
                 /> 
-              <label for="policy" class="modal-check-text">
-                <span>
+              <label 
+              for="user-privacy" 
+              class="modal-check-text">
+                <span class="check">
                   <svg class="check-icon" 
                     width="10"
                     height="8">
