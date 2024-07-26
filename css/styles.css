@@ -845,7 +845,7 @@ fill: #F4F4FD;
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
-.modal-check:checked + .modal-check-text .span-check {
+.modal-check:checked + .modal-check-text > .span-check {
   border: none;
   background-color: #404BBF;
   fill: #F4F4FD;
