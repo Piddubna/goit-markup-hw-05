@@ -779,6 +779,11 @@ fill: #F4F4FD;
   fill:#4D5AE5;
 }
 
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: #ffffff;
+}
+
 .textarea {
   width: 100%;
   height: 120px;
@@ -843,14 +848,14 @@ fill: #F4F4FD;
 }
 
 .modal-check-text .span-check {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   fill: #F4F4FD;
   background-color: #fff;
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
-.modal-check:checked + .modal-check-text > .span-check {
+.modal-check:checked + .modal-check-text .span-check {
   border: none;
   background-color: #404BBF;
   fill: #F4F4FD;
