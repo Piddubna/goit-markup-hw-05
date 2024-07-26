@@ -643,6 +643,7 @@ fill: #F4F4FD;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -653,10 +654,12 @@ fill: #F4F4FD;
   min-height: 584px;
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%) scale(1.5);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+  0 1px 3px 0 rgba(0, 0, 0, 0.12), 
+  0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
-  transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -708,7 +711,7 @@ fill: #F4F4FD;
 }
 
 .modal-field {
- margin-bottom: 16px;
+ margin-bottom: 8px;
 }
 
 .form-label {
@@ -743,7 +746,7 @@ fill: #F4F4FD;
 }
 
 .modal-input:focus {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5; 
 }
 
 .modal-field-wrap {
@@ -802,7 +805,7 @@ fill: #404BBF;
   align-items: center;
 }
 
-.check {
+.span-check{
 width: 16px;
 height: 16px;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -820,7 +823,7 @@ justify-content: center;
   gap: 8px;
 }
 
-.modal-check-text span {
+.modal-check-text .span-check {
   display: flex;
   align-items: center;
   fill: transparent;
@@ -830,7 +833,7 @@ justify-content: center;
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
-.modal-check:checked + .modal-check-text span {
+.modal-check:checked + .modal-check-text .span-check {
   fill:#404BBF ;
   border: none;
 }
