@@ -654,12 +654,12 @@ fill: #F4F4FD;
   min-height: 584px;
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%) scale(1.5);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
   0 1px 3px 0 rgba(0, 0, 0, 0.12), 
   0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -808,12 +808,13 @@ fill: #F4F4FD;
   align-items: center;
 }
 
-.span-check{
+.span-check {
 width: 16px;
 height: 16px;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 display: inline-flex;
 justify-content: center;
+fill: transparent;
 }
 
 .modal-check-text {
@@ -824,7 +825,6 @@ justify-content: center;
   line-height: 1.17; 
   letter-spacing: 0.04em;
   gap: 8px;
-  fill: transparent;
   color: #8e8f99;
 }
 
@@ -842,7 +842,7 @@ justify-content: center;
 .modal-check:checked + .modal-check-text .span-check {
   border: none;
   background-color: #404BBF;
-  fill: #fff;
+  fill: #F4F4FD;
 }
 
 .policy {
