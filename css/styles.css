@@ -860,6 +860,10 @@ fill: #F4F4FD;
   background-color: #404BBF;
   fill: #F4F4FD;
 }
+.span-check {
+  display: inline-flex;
+  fill: transparent;
+}
 
 .policy {
   font-weight: 400;
