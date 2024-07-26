@@ -86,7 +86,6 @@ display: flex;
 }
 
 .header-menu-item {
- 
 }
 
 .header-menu-link {
@@ -379,9 +378,9 @@ color: #404BBF;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-  .portfolio-item-wrap {
-    position: relative;
-    overflow: hidden;
+.portfolio-item-wrap {
+  position: relative;
+  overflow: hidden;
 }
 
 .overlay {
@@ -431,11 +430,11 @@ color: #404BBF;
 }
 
 .portfolio-subtitle {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  text-align: left;
 }
 
 .footer {
@@ -624,7 +623,7 @@ fill: #F4F4FD;
   color:#31d0aa;
 }
 
-.subscribe-input:hover ,
+.subscribe-input:hover,
 .subscribe-input:focus {
   border-color: #31d0aa;
 }
@@ -652,7 +651,7 @@ fill: #F4F4FD;
   min-height: 584px;
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
-  transform: translate(-50%, -50%) scale(1.5);
+  transform: translate(-50%, -50%);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
   0 1px 3px 0 rgba(0, 0, 0, 0.12), 
   0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -700,7 +699,6 @@ fill: #F4F4FD;
   border: none;
   background-color:#404bbf;
 }
-
 
 .modal-tytle {
   font-weight: 500;
@@ -814,7 +812,7 @@ fill: #F4F4FD;
 }
 
 .check-icon { 
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
