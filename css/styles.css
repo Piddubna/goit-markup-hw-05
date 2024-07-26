@@ -782,7 +782,7 @@ fill: #404BBF;
   letter-spacing: 0.04em; 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  outline: transparent;
+  background-color: transparent;
   margin-bottom: 16px;
   color: rgba(46, 47, 66, 0.4);
   resize: none;
@@ -827,16 +827,18 @@ justify-content: center;
 .modal-check-text .span-check {
   display: flex;
   align-items: center;
-  fill: #F4F4FD;
+  fill:transparent;
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  background-color: #404BBF;
+  background-color: #fff;
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
 .modal-check:checked + .modal-check-text .span-check {
   border: none;
+  background-color: #404BBF;
+  fill: #fff;
 }
 
 .policy {
