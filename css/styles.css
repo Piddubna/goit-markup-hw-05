@@ -821,20 +821,21 @@ justify-content: center;
   line-height: 1.17; 
   letter-spacing: 0.04em;
   gap: 8px;
+  fill: transparent;
 }
 
 .modal-check-text .span-check {
   display: flex;
   align-items: center;
-  fill: transparent;
+  fill: #F4F4FD;
   width: 16px;
   height: 16px;
   border-radius: 2px;
+  background-color: #404BBF;
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
 .modal-check:checked + .modal-check-text .span-check {
-  fill:#404BBF ;
   border: none;
 }
 
@@ -849,7 +850,7 @@ justify-content: center;
 }
 
 .form-btn {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -860,7 +861,7 @@ justify-content: center;
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   cursor: pointer;
   color: #fff;
