@@ -756,9 +756,6 @@ fill: #F4F4FD;
   border-color: #4d5ae5; 
 }
 
-.modal-field-wrap:focus-within .modal-icon {
-  fill: #4D5AE5;
-}
 .modal-field-comment {
   margin-bottom: 16px;
 }
