@@ -627,12 +627,16 @@ fill: #F4F4FD;
 .subscribe-input:focus {
   border-color: #31d0aa;
 }
+
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -641,6 +645,10 @@ fill: #F4F4FD;
   opacity: 1;
   visibility: visible;
   pointer-events: auto; 
+}
+
+.modal-overlay:not(.is-open) .modal {
+  transform: translate(-50%, -50%) scale(1.5);
 }
 
 .modal {
@@ -671,30 +679,28 @@ fill: #F4F4FD;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0; 
   cursor: pointer;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.modal-close-btn:hover{
-  border: none; 
-  fill: #ffffff;
-}
 
-.modal-close-btn:focus{
-  border: none; 
-  fill: #ffffff;
+.modal-close-btn:focus,
+.modal-close-btn:hover {
+  background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-icon {
-  width: 8px;
-  height: 8px;
-  fill: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
-
-.modal-close-icon:focus, 
-.modal-close-icon:hover {
-  fill: #ffffff;
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: #ffff;
+  background-color: #404bbf;
 }
 
 .modal-tytle {
@@ -706,8 +712,22 @@ fill: #F4F4FD;
   color: #2E2F42;
   margin-bottom: 16px;
 }
+
+.form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
 .modal-field {
   margin-bottom: 8px;
+  border: 1 px solid #2E2F42;
+  width: 360px;
+  height: 58px;
 
 }
 .form-label {
@@ -721,6 +741,7 @@ fill: #F4F4FD;
 
 .modal-field-wrap {
   position: relative;
+  margin-bottom: 8px;
 }
 
 .modal-input {
@@ -735,6 +756,10 @@ fill: #F4F4FD;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+
 .modal-icon {
   position: absolute;
   left: 16px;
@@ -745,22 +770,22 @@ fill: #F4F4FD;
 }
 
 .modal-icon:hover,
-.modal-icon:focus{
+.modal-icon:focus {
   fill:#4D5AE5;
 }
 
-.modal-input:focus-within .modal-icon {
+.modal-input:focus + .modal-icon {
   fill: #4D5AE5;
 }
 
 .modal-field-comment {
   margin-bottom: 16px;
 }
+
 .textarea {
-  width: 100%;
+  width: 360px;
   height: 120px;
   padding: 8px 16px;
-  display: flex;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -778,24 +803,23 @@ fill: #F4F4FD;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.04em;  
+  letter-spacing: 0.04em; 
+  color: rgba(46, 47, 66, 0.4); 
 }
 
 .textarea:hover::placeholder {
-  border: 1px solid #4d5ae5;
+  border-color:  #4d5ae5;
 }
 
 .textarea:focus {
-  border: 1px solid #4d5ae5;
+  border-color:  #4d5ae5;
 }
 
 .modal-checkbox {
   margin-bottom: 24px;
 }
 
-.modal-check-text {
-  display: inline-flex;
-  align-items: center;
+.modal-check-label {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17; 
@@ -807,21 +831,21 @@ fill: #F4F4FD;
 .span-check {
   border: none; 
   display: inline-flex;
+  margin-right: 8px;
 }
 
-.modal-check-text .span-check {
+.modal-check-label .span-check {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-  margin-right: 8px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   border 250ms cubic-bezier(0.4, 0, 0.2, 1),
   fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
 .check-icon {
@@ -830,13 +854,14 @@ fill: #F4F4FD;
   fill:#ffffff;  
 }
 
-.modal-check:checked + .modal-check-text .span-check {
+.modal-check:checked + .modal-check-label .span-check {
   border: none;
   background-color: #404BBF;
   fill: #F4F4FD;
 }
 
 .policy {
+  display: inline-flex;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33; 
