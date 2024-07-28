@@ -701,7 +701,6 @@ fill: #F4F4FD;
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: #ffff;
-  background-color: #404bbf;
 }
 
 .modal-tytle {
