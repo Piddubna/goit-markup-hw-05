@@ -439,7 +439,7 @@ color: #404BBF;
 
 .footer {
   background: #2e2f42;
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 .footer-container {
@@ -805,7 +805,7 @@ fill: #F4F4FD;
 }
 
 .modal-checkbox {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .modal-check-label {
