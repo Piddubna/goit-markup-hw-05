@@ -615,11 +615,11 @@ fill: #F4F4FD;
 }
 
 .subscribe-btn:hover {
-  background: #404BBF;
+  background-color: #404BBF;
 }
 
 .subscribe-btn:focus {
-  background: #404BBF;
+  background-color: #404BBF;
 }
 
 .plain {
